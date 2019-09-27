@@ -1,7 +1,15 @@
 package app;
 
 public class Carro {
+  
+  //#region Atributos
+  private String dono;
+  private String Modelo;
+  private String Cor;
+  private boolean movimento;
+  //#endregion
 
+  //#region Métodos Contrutores
   public Carro() {
     this.movimento = false;
   }
@@ -10,12 +18,9 @@ public class Carro {
     this.dono = pCliente;
     this.movimento = false;
   }
+  //#endregion
 
-  private String dono;
-  private String Modelo;
-  private String Cor;
-  private boolean movimento;
-
+  //#region Métodos Getters e Setters
   public boolean isMovimento() {
     return movimento;
   }
@@ -43,7 +48,9 @@ public class Carro {
   public void setModelo(String modelo) {
     this.Modelo = modelo;
   }
+  //#endregion
 
+  //#region Métodos da Classe Carro
   public void CaracteristicasDoCarro(){
     System.out.println("Carro do "+ this.getDono() +" Modelo: "+ this.getModelo() + " Cor: "+ this.getCor() + " - Está em movimento: "+ (this.isMovimento() ? "Sim" : "Não"));
   }
@@ -55,5 +62,5 @@ public class Carro {
   public void Movimentar(boolean pMovimento){
     this.movimento = pMovimento;
   }
-
+  //#endregion
 }
