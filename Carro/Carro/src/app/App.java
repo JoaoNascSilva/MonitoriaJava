@@ -7,6 +7,8 @@ public class App {
         CarroDoJoao.setCor("Vermelho");
         CarroDoJoao.setModelo("Gol");
         CarroDoJoao.CaracteristicasDoCarro();
+        Pessoa p = new Pessoa("João");
+        Vendedor v = new Vendedor();
         
         CarroDoJoao.setCor("Prata");        
         CarroDoJoao.Movimentar(true);
@@ -23,6 +25,15 @@ public class App {
         CarroDoJoao.CaracteristicasDoCarro();
 
         CarroDoJoao.CaracteristicasDoCarro(CarroDoJoao);
+
+        p.Andar();
+        p.Falar();
+        p.Correr();
+        p.Parar();
+
+        v.setNome("Fábio");
+
+        System.out.println(v.Vender(p));
 
     }
 }
